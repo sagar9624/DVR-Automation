@@ -159,4 +159,4 @@ export async function renderAttendance(app) {
     };
 
     loadAttendance();
-}. 
+}
