@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* 🔥 prevents right overflow */
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== SIDEBAR (MATCH DASHBOARD) ===== */
+.sidebar {
+  width: 230px;
+  min-width: 230px;
+
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: white;
+
+  padding: 25px 20px;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 15px 0;
+}
+
+.sidebar p {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar p:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
+}
+
+.logout {
+  margin-top: auto;
+  color: #ff4d4d;
+}
+
+/* ===== MAIN ===== */
+.main {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+  min-height: 100vh;
+
+  padding: 40px;
+
+  /* REMOVE center alignment */
+  display: block;
+  
+  background: linear-gradient(135deg, gray, black);
+}
+
+
+
+
+/* ===== ATTENDANCE CARD ===== */
+.attendance-card {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 35px;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, gray, darkslategray);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08),
+    0 8px 16px rgba(0,0,0,0.05);
+
+  text-align: center;
+  transition: 0.3s;
+}
+
+.attendance-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== TITLE ===== */
+.attendance-card h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* ===== SUBTEXT ===== */
+.attendance-card p {
+  font-size: 15px;
+  color: greenyellow;
+}
+
+/* ===== SECTION TITLE ===== */
+.attendance-card h3 {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: left;
+  position: relative;
+}
+
+.attendance-card h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #3b82f6;
+  display: block;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+/* ===== TABLE CONTAINER ===== */
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+/* ===== TABLE ===== */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+.attendance-table thead {
+  background: #f1f5f9;
+}
+
+.attendance-table th {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* ROWS */
+.attendance-table td {
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/* HOVER */
+.attendance-table tbody tr:hover {
+  background: #eef2ff;
+  transition: 0.2s;
+}
+
+/* ===== BUTTONS ===== */
+.delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 10px;
+}
+
+.delete:hover {
+  transform: scale(1.05);
+}
+
+.logout-btn{
+  background: linear-gradient(135deg, green, yellow);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout{
+  background: linear-gradient(135deg, green, yellow);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
